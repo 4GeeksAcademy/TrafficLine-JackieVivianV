@@ -85,10 +85,10 @@ const Home = () => {
 
 	return (
 		<div className="container d-block bg-dark justify-content-center rounded-4 p-3" style={{width: "10rem"}}>
-			<div className="bg-danger mt-3 mx-auto " style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: redLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={function(){redHandlerClick(redLightOn === true)}}></div> 
-			<div className="bg-warning mt-3 mx-auto" style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: yellowLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={function(){yellowHandlerClick(yellowLightOn === true)}}></div> 
-			<div className="bg-success mt-3 mb-3 mx-auto" style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: greenLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={function(){greenHandlerClick(greenLightOn === true)}}></div> 
-			<div className="bg-info mt-3 mb-3 mx-auto" style ={{display: add, borderRadius:"50%", width:"100px",height: "100px", boxShadow: babyBlueLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={function(){babyBlueHandlerClick(babyBlueLightOn === true)}}></div> 
+			<div className="bg-danger mt-3 mx-auto " style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: redLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={redHandlerClick}></div> 
+			<div className="bg-warning mt-3 mx-auto" style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: yellowLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={yellowHandlerClick}></div> 
+			<div className="bg-success mt-3 mb-3 mx-auto" style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: greenLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={greenHandlerClick}></div> 
+			<div className="bg-info mt-3 mb-3 mx-auto" style ={{display: add, borderRadius:"50%", width:"100px",height: "100px", boxShadow: babyBlueLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={babyBlueHandlerClick}></div> 
 			<button className="bg-black rounded-4 text-light" onClick={buttonClick}>Radioactive Semáforo</button>		
 		</div>
 	);
