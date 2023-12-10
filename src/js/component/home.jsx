@@ -16,6 +16,22 @@ const Home = () => {
 		setColorAdd("flex");
 	}
 
+	function handlerChangeLight(){
+		if (redLightOn === false && greenLightOn === false && yellowLightOn === false){
+			setColorRed(true);
+		} else if (redLightOn === true && greenLightOn === false && yellowLightOn === false){
+			setColorGreen(true);
+			setColorRed(false);
+		} else if (redLightOn === false && greenLightOn === true && yellowLightOn === false){
+			setColorYellow(true);
+			setColorGreen(false);
+		} else {
+			setColorRed(true);
+			setColorYellow(false);
+	    }
+
+	 }
+
 	function redHandlerClick(){
 
 		if (yellowLightOn === true || greenLightOn === true || babyBlueLightOn === true) {
@@ -89,7 +105,8 @@ const Home = () => {
 			<div className="bg-warning mt-3 mx-auto" style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: yellowLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={yellowHandlerClick}></div> 
 			<div className="bg-success mt-3 mb-3 mx-auto" style ={{borderRadius:"50%", width:"100px",height: "100px", boxShadow: greenLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={greenHandlerClick}></div> 
 			<div className="bg-info mt-3 mb-3 mx-auto" style ={{display: add, borderRadius:"50%", width:"100px",height: "100px", boxShadow: babyBlueLightOn ? "0 0 40px #FFFFFF" : "none"}} onClick={babyBlueHandlerClick}></div> 
-			<button className="bg-black rounded-4 text-light" onClick={buttonClick}>Radioactive Semáforo</button>		
+			<button className="bg-dark rounded-4 text-light" onClick={buttonClick}>Radioactive Semáforo</button>	
+			<button className="bg-dark rounded-4 text-light mt-3" onClick={handlerChangeLight}>The light is changing</button>	
 		</div>
 	);
 };
